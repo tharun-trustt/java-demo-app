@@ -18,8 +18,8 @@ pipeline {
             steps {
                 sh '''
                     pkill -f myapp.jar || true
-                    cp target/*.jar /home/ec2-user/myapp.jar
-                    nohup java -jar /home/ec2-user/myapp.jar > app.log 2>&1 &
+                    cp target/*.jar /home/ubuntu/myapp.jar
+                    nohup java -jar /home/ubuntu/myapp.jar > app.log 2>&1 &
                 '''
             }
         }
